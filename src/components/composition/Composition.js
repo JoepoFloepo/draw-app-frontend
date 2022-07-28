@@ -87,6 +87,8 @@ const Composition = (props) => {
         setNetPanningX(netPanningX + distanceTraveledX);
         setNetPanningY(netPanningY + distanceTraveledY);
 
+        //TODO Canvas doesn't draw while moving
+
         draw(canvasRef.current.getContext('2d'))
     }
 
