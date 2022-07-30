@@ -1,0 +1,25 @@
+
+.filters {
+    width: 20rem;
+    border: none;
+}
+
+fieldset {
+    border: 0;
+}
+
+.hr {
+    border: 1px solid black;
+}
+
+.form {
+    border: none;
+}
+
+
+fieldset label {
+    font-size: 2rem;
+    border: none;
+
+}
+

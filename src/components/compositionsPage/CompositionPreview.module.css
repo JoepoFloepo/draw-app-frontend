@@ -1,0 +1,31 @@
+
+.drawingCanvas {
+    background-color: #FFF4E3;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.drawingDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.compositionPreview {
+    background-color: #FFFFFF;
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.previewImage {
+    width: 24rem;
+    height: 24rem;
+}
+
+.previewText {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}

@@ -1,18 +1,4 @@
 import React, {Fragment, useEffect, useRef, useState} from 'react';
-import canvas from "./canvas/Canvas";
-import {loadImage} from "canvas";
-
-const TEST_IMG_SOURCES = [
-    "-1,-1.png",
-    "-1,0.png",
-    "-1,1.png",
-    "0,-1.png",
-    "0,0.png",
-    "0,1.png",
-    "1,-1.png",
-    "1,0.png",
-    "1,1.png",
-]
 
 const Composition = (props) => {
 
@@ -30,6 +16,8 @@ const Composition = (props) => {
     useEffect(() => {
 
         const canvas = canvasRef.current;
+
+        // todo find out what this does
         canvas.width = window.innerWidth * 2;
         canvas.height = window.innerHeight * 2;
 
@@ -49,9 +37,9 @@ const Composition = (props) => {
         context.clearRect(0, 0, context.canvas.width, context.canvas.height);
         for (let i = 0; i < 3; i++) {
             for (let j = 0; j < 3; j++) {
-                loadImage("https://www.codegrepper.com/images/logo_colors_small.png").then(image => {
-                    context.drawImage(image, 250 * i + netPanningX, 250 * j + netPanningY);
-                })
+                let path1 = new Path2D();
+                path1.rect(netPanningX + i * 600, netPanningY + j * 400, 600,400);
+                context.stroke(path1);
             }
         }
 
@@ -71,8 +59,8 @@ const Composition = (props) => {
         setIsDragging(false)
     }
 
-    // TODO implement throttle
     const handleMouseMove = (e) => {
+
         if (!isDragging) {
             return;
         }
@@ -86,8 +74,6 @@ const Composition = (props) => {
 
         setNetPanningX(netPanningX + distanceTraveledX);
         setNetPanningY(netPanningY + distanceTraveledY);
-
-        //TODO Canvas doesn't draw while moving
 
         draw(canvasRef.current.getContext('2d'))
     }

@@ -1,0 +1,57 @@
+.logo {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.icon {
+    height: 3.2rem;
+    width: 3.2rem;
+}
+
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    gap: 1rem;
+}
+
+.navBar {
+    background-color: #FFB039;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: #FFFFFF;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container {
+    width: 130rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-size: 2rem;
+}
+
+.logoText,
+.navLink
+{
+    color: #FFFFFF;
+}
+
+
